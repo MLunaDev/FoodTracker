@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  FoodTracker
 //
-//  Created by Diogo, Mariana de Oliveira on 07/01/2020.
+//  Created by Diogo, Mariana.
 //  Copyright © 2020 Luna. All rights reserved.
 //
 
