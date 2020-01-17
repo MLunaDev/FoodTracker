@@ -15,6 +15,7 @@
 		37B6444B23C52B1A007F4831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B6444A23C52B1A007F4831 /* Assets.xcassets */; };
 		37B6445C23C52B1A007F4831 /* FoodTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B6445B23C52B1A007F4831 /* FoodTrackerTests.swift */; };
 		37CCF01623D11D7800D04D52 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CCF01523D11D7800D04D52 /* Meal.swift */; };
+		37CCF01923D1223E00D04D52 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CCF01523D11D7800D04D52 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -230,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CCF01923D1223E00D04D52 /* Meal.swift in Sources */,
 				37B6445C23C52B1A007F4831 /* FoodTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
