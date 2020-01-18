@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import os.log
 
 class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -15,6 +16,9 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var meal: Meal?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +58,23 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         // Dismiss the picker
         dismiss(animated: true, completion: nil)
     }
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        //Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        let name = nameTextField.text ?? ""
+        let photo = photoImageView.image
+        let rating = ratingControl.rating
+        
+        meal = Meal(name: name, photo: photo, rating: rating)
+    }
      
     //MARK: Actions
     @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
@@ -72,4 +93,6 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
         
         present(imagePickerController, animated: true, completion: nil)
     }
+    
+    
 }
