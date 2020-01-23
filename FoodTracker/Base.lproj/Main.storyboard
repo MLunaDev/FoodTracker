@@ -44,6 +44,7 @@
                                     <outlet property="nameLabel" destination="wDp-kq-5QJ" id="eqG-kS-oOK"/>
                                     <outlet property="photoImageView" destination="l0B-ub-gSS" id="TDY-xR-j0j"/>
                                     <outlet property="ratingControl" destination="h2n-zr-bZG" id="hWC-hQ-aq1"/>
+                                    <segue destination="NzY-c4-GtC" kind="show" identifier="ShowDetail" id="AAN-0z-scf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -71,11 +72,11 @@
             <objects>
                 <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NzY-c4-GtC" customClass="MealViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1JE-ic-edY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sd6-tB-2Nf">
-                                <rect key="frame" x="20" y="76" width="374" height="414"/>
+                                <rect key="frame" x="20" y="108" width="374" height="414"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFC-Jm-BGt">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -136,7 +137,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="130.58035714285714"/>
+            <point key="canvasLocation" x="1823" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QvB-qd-IPp">
@@ -154,7 +155,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kY8-Ci-hdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-628.98550724637687" y="130.58035714285714"/>
+            <point key="canvasLocation" x="-486" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZLu-d0-Q7K">
@@ -172,10 +173,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laL-td-CIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="130.58035714285714"/>
+            <point key="canvasLocation" x="1052" y="-192"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="AAN-0z-scf"/>
+    </inferredMetricsTieBreakers>
 </document>
